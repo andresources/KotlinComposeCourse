@@ -59,13 +59,12 @@ fun FlowRowDemo() {
 
 @OptIn(ExperimentalMaterial3Api::class, ExperimentalLayoutApi::class)
 @Composable
-fun Filters() {
+fun Filters(onSelectedItems: (data: List<String>)->Unit) {
     var selList: MutableList<String> = mutableListOf()
     val filters = listOf(
         "Washer/Dryer", "Ramp access", "Garden", "Cats OK", "Dogs OK", "Smoke-free"
     )
     Column() {
-
         FlowRow(
             horizontalArrangement = Arrangement.spacedBy(8.dp)
         ) {
@@ -98,7 +97,8 @@ fun Filters() {
         }
         var context = LocalContext.current
         Button(onClick = {
-            Toast.makeText(context.applicationContext,"${selList.size}",Toast.LENGTH_SHORT).show()
+            onSelectedItems.invoke(selList)
+            //Toast.makeText(context.applicationContext,"${selList.size}",Toast.LENGTH_SHORT).show()
         }) {
             Text(text = "Subbmit")
         }
