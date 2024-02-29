@@ -81,6 +81,7 @@ fun Filters(onSelectedItems: (data: List<String>)->Unit) {
                         } else {
                             selList.remove(title)
                         }
+                        //onSelectedItems.invoke(selList)
 
                     }, colors = FilterChipDefaults.filterChipColors(
                         containerColor = Color.Green,
