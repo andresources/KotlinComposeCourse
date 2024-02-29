@@ -16,6 +16,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import com.mindorks.example.kotlincomposecourse.camera.ImageFromCameraContent
 import com.mindorks.example.kotlincomposecourse.flowlayout.Filters
 import com.mindorks.example.kotlincomposecourse.flowlayout.FlowRowDemo
 import com.mindorks.example.kotlincomposecourse.ui.theme.KotlinComposeCourseTheme
@@ -30,14 +31,16 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    var size: String by remember {mutableStateOf("Selected Values : ")}
+                    ImageFromCameraContent()
+                    /*var size: String by remember {mutableStateOf("Selected Values : ")}
                     Column() {
                         Text(text = "$size")
                         Filters{
                             size = it.toString()
                         }
-                    }
+                    }*/
                    // FlowRowDemo()
+
                 }
             }
         }
