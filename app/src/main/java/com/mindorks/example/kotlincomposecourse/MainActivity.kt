@@ -3,6 +3,7 @@ package com.mindorks.example.kotlincomposecourse
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.activity.viewModels
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.Button
@@ -15,13 +16,17 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import com.mindorks.example.kotlincomposecourse.camera.ImageFromCameraContent
+import com.mindorks.example.kotlincomposecourse.croping.ImagesViewModel
+import com.mindorks.example.kotlincomposecourse.croping.ViewModelDemo
 import com.mindorks.example.kotlincomposecourse.flowlayout.Filters
 import com.mindorks.example.kotlincomposecourse.flowlayout.FlowRowDemo
 import com.mindorks.example.kotlincomposecourse.ui.theme.KotlinComposeCourseTheme
 
 class MainActivity : ComponentActivity() {
+    val viewModel: ImagesViewModel by viewModels()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
@@ -31,7 +36,8 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    ImageFromCameraContent()
+                    App(viewModel)
+                    //ImageFromCameraContent()
                     /*var size: String by remember {mutableStateOf("Selected Values : ")}
                     Column() {
                         Text(text = "$size")
@@ -44,6 +50,17 @@ class MainActivity : ComponentActivity() {
                 }
             }
         }
+    }
+}
+
+@Composable
+private fun App(viewModel: ImagesViewModel) {
+    Surface(
+        modifier = Modifier.fillMaxSize(),
+        color = Color.Green
+    ) {
+        ViewModelDemo(viewModel = viewModel, modifier = Modifier.fillMaxSize())
+//        SimpleDemo(modifier = Modifier.fillMaxSize())
     }
 }
 
