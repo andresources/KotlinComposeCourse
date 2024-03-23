@@ -20,10 +20,14 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import com.mindorks.example.kotlincomposecourse.TextField.TextFieldDemo
 import com.mindorks.example.kotlincomposecourse.camera.ImageFromCameraContent
+import com.mindorks.example.kotlincomposecourse.checkboxdemo.CheckBoxDemo
 import com.mindorks.example.kotlincomposecourse.croping.ImagesViewModel
 import com.mindorks.example.kotlincomposecourse.croping.ViewModelDemo
 import com.mindorks.example.kotlincomposecourse.flowlayout.Filters
 import com.mindorks.example.kotlincomposecourse.flowlayout.FlowRowDemo
+import com.mindorks.example.kotlincomposecourse.radiobutton.MultipleRadioButtons
+import com.mindorks.example.kotlincomposecourse.radiobutton.RadioButtonsDemo
+import com.mindorks.example.kotlincomposecourse.switchbuttons.Demo_SwitchComponent
 import com.mindorks.example.kotlincomposecourse.ui.theme.KotlinComposeCourseTheme
 
 class MainActivity : ComponentActivity() {
@@ -38,7 +42,10 @@ class MainActivity : ComponentActivity() {
                     color = MaterialTheme.colorScheme.background
                 ) {
                     //App(viewModel)
-                    TextFieldDemo()
+                    //TextFieldDemo()
+                    //Demo_SwitchComponent()
+                    //CheckBoxDemo()
+                    RadioButtonsDemo()
                     //ImageFromCameraContent()
                     /*var size: String by remember {mutableStateOf("Selected Values : ")}
                     Column() {
