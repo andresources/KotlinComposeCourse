@@ -20,6 +20,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import com.mindorks.example.kotlincomposecourse.TextField.TextFieldDemo
 import com.mindorks.example.kotlincomposecourse.camera.ImageFromCameraContent
+import com.mindorks.example.kotlincomposecourse.cards.CardsDemo
 import com.mindorks.example.kotlincomposecourse.checkboxdemo.CheckBoxDemo
 import com.mindorks.example.kotlincomposecourse.croping.ImagesViewModel
 import com.mindorks.example.kotlincomposecourse.croping.ViewModelDemo
@@ -45,7 +46,8 @@ class MainActivity : ComponentActivity() {
                     //TextFieldDemo()
                     //Demo_SwitchComponent()
                     //CheckBoxDemo()
-                    RadioButtonsDemo()
+                    //RadioButtonsDemo()
+                    CardsDemo()
                     //ImageFromCameraContent()
                     /*var size: String by remember {mutableStateOf("Selected Values : ")}
                     Column() {
