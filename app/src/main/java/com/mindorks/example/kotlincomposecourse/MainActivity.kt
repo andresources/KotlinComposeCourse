@@ -18,6 +18,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
+import com.mindorks.example.kotlincomposecourse.Scaffold.ScaffoldExample
 import com.mindorks.example.kotlincomposecourse.TextField.TextFieldDemo
 import com.mindorks.example.kotlincomposecourse.camera.ImageFromCameraContent
 import com.mindorks.example.kotlincomposecourse.cards.CardsDemo
@@ -47,7 +48,8 @@ class MainActivity : ComponentActivity() {
                     //Demo_SwitchComponent()
                     //CheckBoxDemo()
                     //RadioButtonsDemo()
-                    CardsDemo()
+                    //CardsDemo()
+                    ScaffoldExample()
                     //ImageFromCameraContent()
                     /*var size: String by remember {mutableStateOf("Selected Values : ")}
                     Column() {
