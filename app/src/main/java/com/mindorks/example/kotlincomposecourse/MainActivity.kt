@@ -55,7 +55,8 @@ import com.example.example1.dropdown.listsgrids.NestedScrollScreen
 import com.example.example1.dropdown.myAlertDialogBox
 import com.example.example1.dropdown.showMyDialog
 import com.example.example1.switchbutton.Demo_SwitchComponent
-import com.example.example1.ui.theme.Example1Theme
+
+import com.mindorks.example.kotlincomposecourse.ui.theme.KotlinComposeCourseTheme
 
 class MainActivity : ComponentActivity() {
 
@@ -64,14 +65,14 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            Example1Theme {
+            KotlinComposeCourseTheme {
                 // A surface container using the 'background' color from the theme
                 Surface(modifier = Modifier.fillMaxSize(), color = MaterialTheme.colorScheme.background) {
                     //Greeting("Android")
                     //Demo_ExposedDropdownMenuBox()
                     //Demo_ExposedDropdownMenuBox()
                     //NestedDemo()
-                    CameraDemo()
+                    //CameraDemo()
                     /*Column(){
                         val context = LocalContext.current
                         Text(text = "Name : ${showProgress.value.name}")
@@ -100,8 +101,5 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
 @Preview(showBackground = true)
 @Composable
 fun GreetingPreview() {
-    Example1Theme {
-        //Greeting("Android")
-        //Demo_ExposedDropdownMenuBox()
-    }
+
 }

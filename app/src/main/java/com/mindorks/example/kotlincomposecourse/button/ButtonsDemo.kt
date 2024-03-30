@@ -71,7 +71,7 @@ fun ButtonsEx(sharedViewModel: SharedViewModel=SharedViewModel()) {
             Icon(
                 modifier = Modifier.padding(end = 8.dp), imageVector = Icons.Rounded.NearMe,
                 contentDescription = "Navigate FAB",
-                tint = Color.Black
+               /* tint = Color.Black*/
             )
             Text(text = "Normal Button")
         }

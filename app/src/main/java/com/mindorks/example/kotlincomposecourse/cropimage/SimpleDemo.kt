@@ -15,7 +15,8 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
 import androidx.core.content.FileProvider
 import com.example.example1.camera.createImageFile
-import com.example.example1.ui.theme.Example1Theme
+import com.mindorks.example.kotlincomposecourse.ui.theme.KotlinComposeCourseTheme
+
 import com.mr0xf00.easycrop.*
 import com.mr0xf00.easycrop.ui.ImageCropperDialog
 import kotlinx.coroutines.launch
@@ -59,7 +60,7 @@ fun SimpleDemo(modifier: Modifier = Modifier) {
         }
 
     if (imageCropper.cropState != null) {
-        Example1Theme(darkTheme = true) {
+        KotlinComposeCourseTheme(darkTheme = true) {
             ImageCropperDialog(state = imageCropper.cropState!!)
         }
     }

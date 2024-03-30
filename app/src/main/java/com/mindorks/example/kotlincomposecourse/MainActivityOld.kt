@@ -12,7 +12,9 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
+import com.example.example1.button.ButtonsEx
 import com.mindorks.example.kotlincomposecourse.Scaffold.ScaffoldExample
+import com.mindorks.example.kotlincomposecourse.Text.TextDemo
 import com.mindorks.example.kotlincomposecourse.croping.ImagesViewModel
 import com.mindorks.example.kotlincomposecourse.croping.ViewModelDemo
 import com.mindorks.example.kotlincomposecourse.ui.theme.KotlinComposeCourseTheme
@@ -34,7 +36,8 @@ class MainActivity : ComponentActivity() {
                     //CheckBoxDemo()
                     //RadioButtonsDemo()
                     //CardsDemo()
-                    ScaffoldExample()
+                    TextDemo()
+                    //ScaffoldExample()
                     //ImageFromCameraContent()
                     /*var size: String by remember {mutableStateOf("Selected Values : ")}
                     Column() {

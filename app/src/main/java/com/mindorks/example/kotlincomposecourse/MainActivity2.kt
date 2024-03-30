@@ -77,7 +77,7 @@ import com.example.example1.state.StateHoistingViewModel
 import com.example.example1.state.ViewModelStateManagement
 import com.example.example1.switchbutton.Demo_SwitchComponent
 import com.example.example1.tabs.TabScreen
-import com.example.example1.ui.theme.Example1Theme
+import com.mindorks.example.kotlincomposecourse.ui.theme.KotlinComposeCourseTheme
 
 class MainActivity2 : ComponentActivity() {
     private lateinit var itemViewModel: StateHoistingViewModel
@@ -89,7 +89,7 @@ class MainActivity2 : ComponentActivity() {
             val windowSizeClass = calculateWindowSizeClass(this)
             val configuration = LocalConfiguration.current
             val screenW = configuration.screenWidthDp
-            Example1Theme {
+            KotlinComposeCourseTheme {
                 // A surface container using the 'background' color from the theme
                 Surface(
                     modifier = Modifier.fillMaxSize(),
@@ -111,11 +111,11 @@ class MainActivity2 : ComponentActivity() {
                     //DerivedStateOfDemo()
                     //SideEffectDemo()
                     //MyCoroutineScopeComposable()
-                    //ButtonsEx()
+                    ButtonsEx()
                     /*Column(modifier = Modifier.size(200.dp,200.dp)){
                         ExpCard()
                     }*/
-                    MyExpandedList()
+                    //MyExpandedList()
 
                     //FabClickedScreen(SharedViewModel())
                     //CustomComposableDemo()
@@ -157,7 +157,10 @@ fun Anim1() {
         ),
         exit = slideOutVertically() + shrinkVertically() + fadeOut()
     ) {
-        Text("Hello", Modifier.fillMaxWidth().height(200.dp))
+        Text("Hello",
+            Modifier
+                .fillMaxWidth()
+                .height(200.dp))
     }
 }
 
@@ -172,7 +175,7 @@ fun Greeting2(name: String, modifier: Modifier = Modifier) {
 @Preview(showBackground = true)
 @Composable
 fun GreetingPreview2() {
-    Example1Theme {
-        BoxModel2()
+    KotlinComposeCourseTheme() {
+        ButtonsEx()
     }
 }

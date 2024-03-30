@@ -10,7 +10,8 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.ImageBitmap
 import androidx.compose.ui.unit.dp
-import com.example.example1.ui.theme.Example1Theme
+import com.mindorks.example.kotlincomposecourse.ui.theme.KotlinComposeCourseTheme
+
 import com.mr0xf00.easycrop.CropState
 import com.mr0xf00.easycrop.CropperLoading
 import com.mr0xf00.easycrop.ui.ImageCropperDialog
@@ -26,7 +27,7 @@ fun DemoContent(
     modifier: Modifier = Modifier,
 ) {
     if (cropState != null) {
-        Example1Theme(darkTheme = true) {
+        KotlinComposeCourseTheme(darkTheme = true) {
             ImageCropperDialog(state = cropState)
         }
     }

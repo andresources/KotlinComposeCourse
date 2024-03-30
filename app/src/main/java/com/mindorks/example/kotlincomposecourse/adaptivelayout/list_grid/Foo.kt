@@ -1,6 +1,7 @@
 package com.example.example1.adaptivelayout.list_grid
 
-import com.example.example1.R
+import com.mindorks.example.kotlincomposecourse.R
+
 
 data class Foo(val id:Int,
                val title:String,

@@ -31,7 +31,8 @@ import androidx.compose.ui.unit.sp
 import androidx.constraintlayout.compose.ChainStyle
 import androidx.constraintlayout.compose.ConstraintLayout
 import androidx.constraintlayout.compose.Dimension
-import com.example.example1.R
+import com.mindorks.example.kotlincomposecourse.R
+
 
 @Composable
 fun MovieBookingScreen() {

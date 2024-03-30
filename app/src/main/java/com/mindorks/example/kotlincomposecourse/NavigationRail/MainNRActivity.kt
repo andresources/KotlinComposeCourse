@@ -56,11 +56,12 @@ import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
-import com.example.example1.R
+
 import com.example.example1.adaptivelayout.list_grid.Foo
 import com.example.example1.adaptivelayout.list_grid.LandscapeView
 import com.example.example1.adaptivelayout.list_grid.PortraitView
-import com.example.example1.ui.theme.Example1Theme
+import com.mindorks.example.kotlincomposecourse.R
+import com.mindorks.example.kotlincomposecourse.ui.theme.KotlinComposeCourseTheme
 
 
 class MainNRActivity : ComponentActivity() {
@@ -91,7 +92,7 @@ class MainNRActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            Example1Theme {
+            KotlinComposeCourseTheme {
                 val window = calculateWindowSizeClass(activity = this)
                 val compact = window.widthSizeClass == WindowWidthSizeClass.Compact
                 val medium = window.widthSizeClass == WindowWidthSizeClass.Medium
@@ -130,7 +131,6 @@ class MainNRActivity : ComponentActivity() {
                                     selectedNavigationIndex==2 -> if(compact) PortraitView(Foo.foos_settings) else LandscapeView(Foo.foos_settings)
                                 }
                         }
-
                         /*LazyColumn(
                             modifier = Modifier
                                 .fillMaxSize()
