@@ -1,5 +1,6 @@
 package com.mindorks.example.kotlincomposecourse.TextField
 
+import android.widget.Toast
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -28,6 +29,7 @@ import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.input.PasswordVisualTransformation
@@ -65,32 +67,41 @@ fun TextField(
 fun TextFieldDemo() {
     Column(modifier = Modifier.padding(10.dp)) {
         //SimpleTextField()
-       // LabelAndPlaceHolder()
-        //TextFieldWithInputType()
+         //LabelAndPlaceHolder()
+        TextFieldWithInputType()
         //OutLineTextFieldSample()
         //TextFieldWithIcons()
-        TextFieldReadOnly()
+       /* TextFieldReadOnly()
         TextFieldSingleLine()
         TextFieldMultilines()
         TextFieldWithClearText()
         TextFieldPasswordShowHide()
         TextFieldWithErrorState()
         SupportingTextEx()
-        HelperTextDemo()
+        HelperTextDemo()*/
     }
 
 }
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun SimpleTextField() {
-    var text by remember { mutableStateOf("") }
+    val context = LocalContext.current
+    var data = remember { mutableStateOf("") }
+    Column{
+        Text(text = data.value)
+        TextField(value = data.value, onValueChange = {
+            data.value = it
+        })
+    }
+    
+    /*var text by remember { mutableStateOf("") }
     TextField(
         modifier = Modifier.padding(5.dp),
         value = text,
         onValueChange = { newText ->
             text = newText
         }
-    )
+    )*/
 }
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -102,8 +113,8 @@ fun LabelAndPlaceHolder() {
         onValueChange = { newText ->
             text = newText
         },
-        label = { Text(text = "Your Label") },
-        placeholder = { Text(text = "Your Placeholder/Hint") },
+        label = { Text(text = "Your Name") },
+        placeholder = { Text(text = "Please enter Your name") },
     )
 }
 

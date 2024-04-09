@@ -15,9 +15,13 @@ import androidx.compose.ui.tooling.preview.Preview
 import com.example.example1.button.ButtonsEx
 import com.mindorks.example.kotlincomposecourse.Scaffold.ScaffoldExample
 import com.mindorks.example.kotlincomposecourse.Text.TextDemo
+import com.mindorks.example.kotlincomposecourse.TextField.TextFieldDemo
 import com.mindorks.example.kotlincomposecourse.TextField.ValidationsDemo
 import com.mindorks.example.kotlincomposecourse.croping.ImagesViewModel
 import com.mindorks.example.kotlincomposecourse.croping.ViewModelDemo
+import com.mindorks.example.kotlincomposecourse.layouts.ColumnDemo
+import com.mindorks.example.kotlincomposecourse.layouts.RowDemo
+import com.mindorks.example.kotlincomposecourse.state.StateButton
 import com.mindorks.example.kotlincomposecourse.ui.theme.KotlinComposeCourseTheme
 
 class MainActivity : ComponentActivity() {
@@ -38,7 +42,11 @@ class MainActivity : ComponentActivity() {
                     //RadioButtonsDemo()
                     //CardsDemo()
                     //TextDemo()
-                    ValidationsDemo()
+                    //ValidationsDemo()
+                    //StateButton()
+                     //TextFieldDemo()
+                    //ColumnDemo()
+                    RowDemo()
                     //ScaffoldExample()
                     //ImageFromCameraContent()
                     /*var size: String by remember {mutableStateOf("Selected Values : ")}

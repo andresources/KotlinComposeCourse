@@ -28,6 +28,7 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.unit.dp
+import com.example.example1.button.ButtonsEx
 import com.mindorks.example.kotlincomposecourse.croping.ImagesViewModel
 import com.mindorks.example.kotlincomposecourse.ui.theme.KotlinComposeCourseTheme
 
@@ -41,7 +42,8 @@ class ValidationActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    val viewModel: MainViewModel by viewModels()
+                    ButtonsEx()
+                    /*val viewModel: MainViewModel by viewModels()
                     val state = viewModel.state
                     val context = LocalContext.current
                     LaunchedEffect(key1 = context) {
@@ -54,6 +56,8 @@ class ValidationActivity : ComponentActivity() {
                                         Toast.LENGTH_LONG
                                     ).show()
                                 }
+
+                                else -> {}
                             }
                         }
                     }
@@ -159,8 +163,8 @@ class ValidationActivity : ComponentActivity() {
                         ) {
                             Text(text = "Submit")
                         }
-                    }
-                }
+                    }*/
+                }//
             }
         }
     }

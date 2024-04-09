@@ -77,6 +77,7 @@ import com.example.example1.state.StateHoistingViewModel
 import com.example.example1.state.ViewModelStateManagement
 import com.example.example1.switchbutton.Demo_SwitchComponent
 import com.example.example1.tabs.TabScreen
+import com.mindorks.example.kotlincomposecourse.state.StateButton
 import com.mindorks.example.kotlincomposecourse.ui.theme.KotlinComposeCourseTheme
 
 class MainActivity2 : ComponentActivity() {
@@ -111,7 +112,8 @@ class MainActivity2 : ComponentActivity() {
                     //DerivedStateOfDemo()
                     //SideEffectDemo()
                     //MyCoroutineScopeComposable()
-                    ButtonsEx()
+                   // ButtonsEx()
+                    StateButton()
                     /*Column(modifier = Modifier.size(200.dp,200.dp)){
                         ExpCard()
                     }*/
