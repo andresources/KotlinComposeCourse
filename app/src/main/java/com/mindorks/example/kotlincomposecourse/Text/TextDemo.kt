@@ -1,8 +1,12 @@
 package com.mindorks.example.kotlincomposecourse.Text
 
 import androidx.compose.foundation.ExperimentalFoundationApi
+import androidx.compose.foundation.background
 import androidx.compose.foundation.basicMarquee
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.fillMaxHeight
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.width
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
@@ -21,6 +25,7 @@ import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -30,7 +35,43 @@ import com.mindorks.example.kotlincomposecourse.ui.theme.robots
 
 @Composable
 fun TextDemo(){
-    BasicMarqueeSample()
+    //BasicMarqueeSample()
+    TextFillMaxSize()
+    //TextFillMaxWidth()
+    //TextFillMaxWidth()
+
+}
+
+@Composable
+fun TextFillMaxSize() {
+
+    Column {
+        Text(text = "Hello", modifier = Modifier
+            .background(Color.Red)
+            .fillMaxSize(), textAlign = TextAlign.Center)
+    }
+}
+
+@Composable
+fun TextFillMaxWidth() {
+    Column {
+        Text(
+            text = "Hello", modifier = Modifier
+                .background(Color.Red)
+                .fillMaxWidth()
+        )
+    }
+}
+
+@Composable
+fun TextFillMaxHeight() {
+    Column {
+        Text(
+            text = "Hello", modifier = Modifier
+                .background(Color.Red)
+                .fillMaxHeight()
+        )
+    }
 }
 
 @Composable

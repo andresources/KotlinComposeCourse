@@ -20,7 +20,9 @@ import com.mindorks.example.kotlincomposecourse.TextField.ValidationsDemo
 import com.mindorks.example.kotlincomposecourse.croping.ImagesViewModel
 import com.mindorks.example.kotlincomposecourse.croping.ViewModelDemo
 import com.mindorks.example.kotlincomposecourse.layouts.ColumnDemo
+import com.mindorks.example.kotlincomposecourse.layouts.LazyColumnDemo
 import com.mindorks.example.kotlincomposecourse.layouts.RowDemo
+import com.mindorks.example.kotlincomposecourse.layouts.SimpleLazyRow
 import com.mindorks.example.kotlincomposecourse.state.StateButton
 import com.mindorks.example.kotlincomposecourse.ui.theme.KotlinComposeCourseTheme
 
@@ -41,12 +43,14 @@ class MainActivity : ComponentActivity() {
                     //CheckBoxDemo()
                     //RadioButtonsDemo()
                     //CardsDemo()
-                    //TextDemo()
+                    TextDemo()
                     //ValidationsDemo()
                     //StateButton()
                      //TextFieldDemo()
                     //ColumnDemo()
-                    RowDemo()
+                    //RowDemo()
+                    //LazyColumnDemo()
+                    //SimpleLazyRow()
                     //ScaffoldExample()
                     //ImageFromCameraContent()
                     /*var size: String by remember {mutableStateOf("Selected Values : ")}
