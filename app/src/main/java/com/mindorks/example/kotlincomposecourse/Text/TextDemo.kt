@@ -36,9 +36,9 @@ import com.mindorks.example.kotlincomposecourse.ui.theme.robots
 @Composable
 fun TextDemo(){
     //BasicMarqueeSample()
-    TextFillMaxSize()
+    //TextFillMaxSize()
     //TextFillMaxWidth()
-    //TextFillMaxWidth()
+    TextFillMaxHeight()
 
 }
 

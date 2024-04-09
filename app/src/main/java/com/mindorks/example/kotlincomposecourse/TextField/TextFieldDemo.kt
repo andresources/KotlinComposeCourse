@@ -68,16 +68,20 @@ fun TextFieldDemo() {
     Column(modifier = Modifier.padding(10.dp)) {
         //SimpleTextField()
          //LabelAndPlaceHolder()
-        TextFieldWithInputType()
+        //TextFieldWithInputType()
         //OutLineTextFieldSample()
         //TextFieldWithIcons()
+        //TextFieldWithClearText()
+        //TextFieldPasswordShowHide()
+        //TextFieldWithErrorState()
+        SupportingTextEx()
        /* TextFieldReadOnly()
         TextFieldSingleLine()
         TextFieldMultilines()
-        TextFieldWithClearText()
-        TextFieldPasswordShowHide()
-        TextFieldWithErrorState()
-        SupportingTextEx()
+
+
+
+
         HelperTextDemo()*/
     }
 
@@ -220,6 +224,7 @@ fun TextFieldWithClearText() {
                     }
             )
         }
+
     )
 }
 @OptIn(ExperimentalMaterial3Api::class)
@@ -266,8 +271,8 @@ fun TextFieldWithErrorState() {
         isError = !isValid
     )
 
-    if (!isValid) {
-        Text(text = "Please enter valid text", color = Color.Red)
+    if (!isValid) { //!false -> true
+        Text(text = "PLease enter 4 chars.", color = Color.Red)
     }
 }
 
@@ -275,7 +280,7 @@ fun TextFieldWithErrorState() {
 @Composable
 fun SupportingTextEx() {
     var text by remember { mutableStateOf("") }
-    val maxChar = 5
+    val maxChar = 8
     TextField(
         value = text,
         onValueChange = {newText ->
