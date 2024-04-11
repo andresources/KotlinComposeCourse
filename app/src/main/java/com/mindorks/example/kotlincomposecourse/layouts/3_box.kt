@@ -1,6 +1,7 @@
 package com.example.example1.layouts
 
 import androidx.compose.foundation.ExperimentalFoundationApi
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.combinedClickable
 import androidx.compose.foundation.layout.Box
@@ -14,7 +15,13 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.layout.wrapContentHeight
 import androidx.compose.foundation.layout.wrapContentWidth
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.rounded.ArrowBack
+import androidx.compose.material.icons.rounded.ArrowForward
+import androidx.compose.material.icons.rounded.Settings
 import androidx.compose.material3.Button
+import androidx.compose.material3.FilledIconButton
+import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -22,8 +29,19 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.mindorks.example.kotlincomposecourse.R
+
+@Composable
+fun BoxDemo() {
+    //BoxModel1()
+    BoxModel2()
+    //BoxModel3()
+}
 
 @Composable
 fun BoxModel1() {
@@ -115,9 +133,37 @@ fun BoxModel1() {
     }
 }
 
+@Composable
+fun BoxModel2() {
+    Box(modifier = Modifier
+        .fillMaxWidth()
+        .height(200.dp)) {
+        Image(modifier = Modifier.fillMaxWidth().height(200.dp), contentScale = ContentScale.Crop, painter = painterResource(id = R.drawable.rrr), contentDescription = "Image Desc")
+        FilledIconButton(modifier = Modifier.padding(end = 8.dp).height(20.dp).align(Alignment.CenterEnd).width(20.dp), onClick = {
+
+        }){
+            Icon(modifier = Modifier.height(10.dp).width(10.dp),
+                imageVector = Icons.Rounded.ArrowForward,
+                contentDescription = "",
+                tint = Color.White,
+            )
+        }
+        FilledIconButton(modifier = Modifier.padding(start = 8.dp).height(20.dp).align(Alignment.CenterStart).width(20.dp), onClick = {
+
+        }){
+            Icon(modifier = Modifier.height(10.dp).width(10.dp),
+                imageVector = Icons.Rounded.ArrowBack,
+                contentDescription = "",
+                tint = Color.White,
+            )
+        }
+    }
+}
+
+
 @OptIn(ExperimentalFoundationApi::class)
 @Composable
-fun BoxModel2(){ //offset
+fun BoxModel3(){ //offset
     Box(modifier = Modifier
         .padding(10.dp) //margin
         .background(Color.Red)
@@ -168,4 +214,10 @@ fun BoxModel2(){ //offset
           }
         }
     }
+}
+
+@Preview(showBackground = true)
+@Composable
+fun BoxPreview() {
+    BoxModel2()
 }

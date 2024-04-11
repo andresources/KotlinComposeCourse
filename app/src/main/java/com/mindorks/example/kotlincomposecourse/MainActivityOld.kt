@@ -13,16 +13,19 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.example1.button.ButtonsEx
+import com.example.example1.layouts.BoxDemo
 import com.mindorks.example.kotlincomposecourse.Scaffold.ScaffoldExample
 import com.mindorks.example.kotlincomposecourse.Text.TextDemo
 import com.mindorks.example.kotlincomposecourse.TextField.TextFieldDemo
 import com.mindorks.example.kotlincomposecourse.TextField.ValidationsDemo
+import com.mindorks.example.kotlincomposecourse.bottomnav.BottomNav
 import com.mindorks.example.kotlincomposecourse.croping.ImagesViewModel
 import com.mindorks.example.kotlincomposecourse.croping.ViewModelDemo
 import com.mindorks.example.kotlincomposecourse.layouts.ColumnDemo
 import com.mindorks.example.kotlincomposecourse.layouts.LazyColumnDemo
 import com.mindorks.example.kotlincomposecourse.layouts.RowDemo
 import com.mindorks.example.kotlincomposecourse.layouts.SimpleLazyRow
+import com.mindorks.example.kotlincomposecourse.libraries.ripple.RippleLoadingAnimation
 import com.mindorks.example.kotlincomposecourse.state.StateButton
 import com.mindorks.example.kotlincomposecourse.ui.theme.KotlinComposeCourseTheme
 
@@ -44,7 +47,10 @@ class MainActivity : ComponentActivity() {
                     //RadioButtonsDemo()
                     //CardsDemo()
                     //TextFieldDemo()
-                    ColumnDemo()
+                    //ColumnDemo()
+                    //BoxDemo()
+                    //BottomNav()
+                    RippleLoadingAnimation()
                     //ValidationsDemo()
                     //StateButton()
                      //TextFieldDemo()
