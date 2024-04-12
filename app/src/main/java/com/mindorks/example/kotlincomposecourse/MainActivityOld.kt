@@ -23,6 +23,7 @@ import com.mindorks.example.kotlincomposecourse.croping.ImagesViewModel
 import com.mindorks.example.kotlincomposecourse.croping.ViewModelDemo
 import com.mindorks.example.kotlincomposecourse.layouts.ColumnDemo
 import com.mindorks.example.kotlincomposecourse.layouts.LazyColumnDemo
+import com.mindorks.example.kotlincomposecourse.layouts.LazyRowDemo
 import com.mindorks.example.kotlincomposecourse.layouts.RowDemo
 import com.mindorks.example.kotlincomposecourse.layouts.SimpleLazyRow
 import com.mindorks.example.kotlincomposecourse.libraries.ripple.RippleLoadingAnimation
@@ -50,7 +51,8 @@ class MainActivity : ComponentActivity() {
                     //ColumnDemo()
                     //BoxDemo()
                     //BottomNav()
-                    RippleLoadingAnimation()
+                    //RippleLoadingAnimation()
+                    BoxDemo()
                     //ValidationsDemo()
                     //StateButton()
                      //TextFieldDemo()

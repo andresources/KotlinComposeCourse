@@ -16,7 +16,7 @@ import androidx.compose.ui.unit.dp
 import androidx.wear.compose.material.Text
 
 @Composable
-fun ColumnDemo() {
+fun ColumnDemo() { //VerticalArrage , HorizontalAlign
     //SimpleColumn()
     //ColumnCenterArrangement()
     //ColumnBottomArrangement()

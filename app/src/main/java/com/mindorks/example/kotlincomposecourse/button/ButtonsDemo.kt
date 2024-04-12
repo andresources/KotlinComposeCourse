@@ -15,6 +15,7 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.TrendingUp
 import androidx.compose.material.icons.filled.BookmarkBorder
 import androidx.compose.material.icons.filled.Check
+import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.StarBorder
 import androidx.compose.material.icons.rounded.AcUnit
 import androidx.compose.material.icons.rounded.AccessTime
@@ -65,9 +66,38 @@ import androidx.compose.ui.unit.dp
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun ButtonsEx(sharedViewModel: SharedViewModel=SharedViewModel()) {
-    //var checked by remember { mutableStateOf(true) }
+    var checked by remember { mutableStateOf(true) }
     val context = LocalContext.current
     Column {
+        Switch(
+            checked = checked,
+            onCheckedChange = {
+                checked = it
+            },
+            colors = SwitchDefaults.colors(
+                checkedThumbColor = MaterialTheme.colorScheme.primary,
+                checkedTrackColor = MaterialTheme.colorScheme.primaryContainer,
+                uncheckedThumbColor = MaterialTheme.colorScheme.secondary,
+                uncheckedTrackColor = MaterialTheme.colorScheme.secondaryContainer,
+            ),
+            thumbContent = {
+                if (checked) {
+
+                        Icon(
+                            imageVector = Icons.Filled.Check,
+                            contentDescription = null,
+                            modifier = Modifier.size(SwitchDefaults.IconSize),
+                        )
+
+                } else {
+                    Icon(
+                        imageVector = Icons.Filled.Close,
+                        contentDescription = null,
+                        modifier = Modifier.size(SwitchDefaults.IconSize),
+                    )
+                }
+            }
+        )
         Button(onClick = {
             Toast.makeText(context,"Button Clicked",Toast.LENGTH_SHORT).show()
         }) {

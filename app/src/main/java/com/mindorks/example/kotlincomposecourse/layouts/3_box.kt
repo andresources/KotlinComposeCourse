@@ -1,5 +1,6 @@
 package com.example.example1.layouts
 
+import android.widget.Toast
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
@@ -30,6 +31,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
@@ -39,8 +41,8 @@ import com.mindorks.example.kotlincomposecourse.R
 @Composable
 fun BoxDemo() {
     //BoxModel1()
-    BoxModel2()
-    //BoxModel3()
+    //BoxModel2()
+    BoxModel3()
 }
 
 @Composable
@@ -138,20 +140,34 @@ fun BoxModel2() {
     Box(modifier = Modifier
         .fillMaxWidth()
         .height(200.dp)) {
-        Image(modifier = Modifier.fillMaxWidth().height(200.dp), contentScale = ContentScale.Crop, painter = painterResource(id = R.drawable.rrr), contentDescription = "Image Desc")
-        FilledIconButton(modifier = Modifier.padding(end = 8.dp).height(20.dp).align(Alignment.CenterEnd).width(20.dp), onClick = {
+        Image(modifier = Modifier
+            .fillMaxWidth()
+            .height(200.dp), contentScale = ContentScale.Crop, painter = painterResource(id = R.drawable.rrr), contentDescription = "Image Desc")
+        FilledIconButton(modifier = Modifier
+            .padding(end = 8.dp)
+            .height(20.dp)
+            .align(Alignment.CenterEnd)
+            .width(20.dp), onClick = {
 
         }){
-            Icon(modifier = Modifier.height(10.dp).width(10.dp),
+            Icon(modifier = Modifier
+                .height(10.dp)
+                .width(10.dp),
                 imageVector = Icons.Rounded.ArrowForward,
                 contentDescription = "",
                 tint = Color.White,
             )
         }
-        FilledIconButton(modifier = Modifier.padding(start = 8.dp).height(20.dp).align(Alignment.CenterStart).width(20.dp), onClick = {
+        FilledIconButton(modifier = Modifier
+            .padding(start = 8.dp)
+            .height(20.dp)
+            .align(Alignment.CenterStart)
+            .width(20.dp), onClick = {
 
         }){
-            Icon(modifier = Modifier.height(10.dp).width(10.dp),
+            Icon(modifier = Modifier
+                .height(10.dp)
+                .width(10.dp),
                 imageVector = Icons.Rounded.ArrowBack,
                 contentDescription = "",
                 tint = Color.White,
@@ -164,29 +180,53 @@ fun BoxModel2() {
 @OptIn(ExperimentalFoundationApi::class)
 @Composable
 fun BoxModel3(){ //offset
+    var content = LocalContext.current
     Box(modifier = Modifier
-        .padding(10.dp) //margin
+        .padding(50.dp) //margin
         .background(Color.Red)
         .fillMaxSize()
         .combinedClickable(
             onLongClick = {
+                Toast
+                    .makeText(content, "onLongClick", Toast.LENGTH_SHORT)
+                    .show()
                 // perform long click operations
             },
             onDoubleClick = {
+                Toast
+                    .makeText(content, "onDoubleClick", Toast.LENGTH_SHORT)
+                    .show()
                 // perform double click operations
             },
             onClick = {
+                Toast
+                    .makeText(content, "onClick", Toast.LENGTH_SHORT)
+                    .show()
                 // click operations
             }
         )) {
-        Text(
-            text = "KSR",
+        Button(
+            onClick = {},
             modifier = Modifier
                 .wrapContentHeight()
                 .wrapContentWidth()
+                .background(Color.Red)
                 .align(Alignment.TopCenter)
-                .offset(x = 0.dp, y = (-10).dp)
-        )
+                .offset(x = 0.dp, y = (-25).dp)
+        ){
+            Text(text = "KSR")
+        }
+        Button(
+            onClick = {},
+            modifier = Modifier
+                .wrapContentHeight()
+                .wrapContentWidth()
+                .background(Color.Red)
+                .align(Alignment.CenterStart)
+                .offset(x = -20.dp)
+        ){
+            Text(text = "Left")
+        }
         Row(
             modifier = Modifier
                 .fillMaxWidth()
@@ -202,7 +242,7 @@ fun BoxModel3(){ //offset
                 .weight(0.5f))
         }
         Box( modifier = Modifier
-            .offset(y = (-25).dp)
+            .offset(y = (-30).dp)
             .fillMaxWidth(0.4f)
             .clip(RoundedCornerShape(100f))
             .background(MaterialTheme.colorScheme.onError)

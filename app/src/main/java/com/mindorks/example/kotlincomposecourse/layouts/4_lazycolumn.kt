@@ -14,6 +14,21 @@ fun LazyColumnDemo() {
 
 @Composable
 fun simplelazy() {
+    /*LazyColumn{
+        item{
+            Text(text = "text-1")
+        }
+        item{
+            Text(text = "text-2")
+        }
+        item{
+            Text(text = "text-3")
+        }
+        item{
+            Text(text = "text-4")
+        }
+    }*/
+
     LazyColumn(modifier = Modifier.background(Color.Blue)){
         item {
             Text(text = "Header")
