@@ -43,6 +43,29 @@ fun BoxDemo() {
     //BoxModel1()
     //BoxModel2()
     BoxModel3()
+    //Demo1()
+}
+
+@Composable
+fun Demo1() {
+
+    Box(modifier = Modifier
+        .fillMaxWidth()
+        .height(200.dp)) {
+        Image(modifier = Modifier
+            .fillMaxWidth()
+            .height(200.dp), contentScale = ContentScale.Crop, painter = painterResource(id = R.drawable.rrr), contentDescription = "Image Desc")
+
+        Text(
+            text = "RRR Movie Review",
+            modifier = Modifier.padding(top = 178.dp, start = 150.dp)
+                .wrapContentWidth()
+                .wrapContentHeight()
+                .background(Color.White)
+
+        )
+    }
+
 }
 
 @Composable
