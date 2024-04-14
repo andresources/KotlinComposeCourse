@@ -12,29 +12,20 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
-import com.example.example1.button.ButtonsEx
-import com.example.example1.carddemo.CardExample
-import com.example.example1.layouts.BoxDemo
-import com.mindorks.example.kotlincomposecourse.Scaffold.ScaffoldExample
-import com.mindorks.example.kotlincomposecourse.Text.TextDemo
-import com.mindorks.example.kotlincomposecourse.TextField.TextFieldDemo
-import com.mindorks.example.kotlincomposecourse.TextField.ValidationsDemo
-import com.mindorks.example.kotlincomposecourse.bottomnav.BottomNav
-import com.mindorks.example.kotlincomposecourse.cards.CardsDemo
 import com.mindorks.example.kotlincomposecourse.croping.ImagesViewModel
 import com.mindorks.example.kotlincomposecourse.croping.ViewModelDemo
-import com.mindorks.example.kotlincomposecourse.layouts.ColumnDemo
-import com.mindorks.example.kotlincomposecourse.layouts.LazyColumnDemo
-import com.mindorks.example.kotlincomposecourse.layouts.LazyRowDemo
-import com.mindorks.example.kotlincomposecourse.layouts.LazyRowRememberedState
-import com.mindorks.example.kotlincomposecourse.layouts.RowDemo
-import com.mindorks.example.kotlincomposecourse.layouts.SimpleLazyRow
-import com.mindorks.example.kotlincomposecourse.libraries.ripple.RippleLoadingAnimation
-import com.mindorks.example.kotlincomposecourse.state.StateButton
+import com.mindorks.example.kotlincomposecourse.kotlinflows.sharedflow.OneShotOperationUsingSharedFlowComp
+import com.mindorks.example.kotlincomposecourse.kotlinflows.sharedflow.SharedFlowFruitsComposable
+import com.mindorks.example.kotlincomposecourse.kotlinflows.sharedflow.SharedFlowFruitsViewModel
+import com.mindorks.example.kotlincomposecourse.kotlinflows.stateflow.OneShotOperationUsingStateFlowComp
+import com.mindorks.example.kotlincomposecourse.kotlinflows.stateflow.StateFlowFruitsComposables
+import com.mindorks.example.kotlincomposecourse.kotlinflows.stateflow.StateFlowFruitsViewModel
 import com.mindorks.example.kotlincomposecourse.ui.theme.KotlinComposeCourseTheme
 
 class MainActivity : ComponentActivity() {
     val viewModel: ImagesViewModel by viewModels()
+    val fruitsViewModel: StateFlowFruitsViewModel by viewModels()
+    val fruitViewModel: SharedFlowFruitsViewModel by viewModels()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
@@ -44,6 +35,10 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
+                    //StateFlowFruitsComposables(fruitsViewModel)
+                    //SharedFlowFruitsComposable(fruitViewModel)
+                    //OneShotOperationUsingStateFlowComp()
+                    OneShotOperationUsingSharedFlowComp()
                     //App(viewModel)
                     //TextFieldDemo()
                     //Demo_SwitchComponent()
@@ -55,7 +50,7 @@ class MainActivity : ComponentActivity() {
                     //BoxDemo()
                     //BottomNav()
                     //RippleLoadingAnimation()
-                    CardsDemo()
+                    //CardsDemo()
                     //LazyRowDemo()
                     //LazyRowRememberedState()
                     //ValidationsDemo()
