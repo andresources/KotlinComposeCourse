@@ -12,6 +12,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
+import com.mindorks.example.kotlincomposecourse.Image.ImageComp
 import com.mindorks.example.kotlincomposecourse.croping.ImagesViewModel
 import com.mindorks.example.kotlincomposecourse.croping.ViewModelDemo
 import com.mindorks.example.kotlincomposecourse.kotlinflows.sharedflow.OneShotOperationUsingSharedFlowComp
@@ -40,7 +41,8 @@ class MainActivity : ComponentActivity() {
                     //SharedFlowFruitsComposable(fruitViewModel)
                     //OneShotOperationUsingStateFlowComp()
                     //OneShotOperationUsingSharedFlowComp()
-                    SnapshotflowComp()
+                    //SnapshotflowComp()
+                    ImageComp()
                     //App(viewModel)
                     //TextFieldDemo()
                     //Demo_SwitchComponent()
