@@ -1,5 +1,5 @@
 package com.example.example1.launched_effect
-
+//https://learndroid.hashnode.dev/jetpack-compose-effect-handlers
 /*
 LaunchedEffect is a powerful API in Jetpack Compose for managing side effects within composable functions.
 LaunchedEffect: run suspend functions in the scope of a composable

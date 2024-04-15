@@ -14,6 +14,7 @@ package com.mindorks.example.kotlincomposecourse.kotlinflows
         private val _myStateFlow = MutableStateFlow("")
         val myStateFlow = _myStateFlow.asStateFlow()
 
+   Flow.StateIn() converts Flow to StateFlow
 
    What is the StateFlow?
    ======================

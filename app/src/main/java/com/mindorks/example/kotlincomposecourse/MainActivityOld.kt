@@ -17,6 +17,7 @@ import com.mindorks.example.kotlincomposecourse.croping.ViewModelDemo
 import com.mindorks.example.kotlincomposecourse.kotlinflows.sharedflow.OneShotOperationUsingSharedFlowComp
 import com.mindorks.example.kotlincomposecourse.kotlinflows.sharedflow.SharedFlowFruitsComposable
 import com.mindorks.example.kotlincomposecourse.kotlinflows.sharedflow.SharedFlowFruitsViewModel
+import com.mindorks.example.kotlincomposecourse.kotlinflows.snapshotflow.SnapshotflowComp
 import com.mindorks.example.kotlincomposecourse.kotlinflows.stateflow.OneShotOperationUsingStateFlowComp
 import com.mindorks.example.kotlincomposecourse.kotlinflows.stateflow.StateFlowFruitsComposables
 import com.mindorks.example.kotlincomposecourse.kotlinflows.stateflow.StateFlowFruitsViewModel
@@ -38,7 +39,8 @@ class MainActivity : ComponentActivity() {
                     //StateFlowFruitsComposables(fruitsViewModel)
                     //SharedFlowFruitsComposable(fruitViewModel)
                     //OneShotOperationUsingStateFlowComp()
-                    OneShotOperationUsingSharedFlowComp()
+                    //OneShotOperationUsingSharedFlowComp()
+                    SnapshotflowComp()
                     //App(viewModel)
                     //TextFieldDemo()
                     //Demo_SwitchComponent()
