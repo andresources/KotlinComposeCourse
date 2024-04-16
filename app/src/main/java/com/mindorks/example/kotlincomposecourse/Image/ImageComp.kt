@@ -32,11 +32,13 @@ import com.mindorks.example.kotlincomposecourse.R
 @Composable
 fun ImageComp() {
     Column(Modifier.verticalScroll(rememberScrollState())){
+
         Image(modifier = Modifier
             .fillMaxWidth()
             .height(120.dp), painter = painterResource(id = R.drawable.rrr) , contentDescription = "Image Desc", contentScale = ContentScale.Crop)
         Image(modifier = Modifier
-            .padding(10.dp).border(BorderStroke(5.dp, Color.Red), CircleShape)
+            .padding(10.dp)
+            .border(BorderStroke(5.dp, Color.Red), CircleShape)
             .clip(CircleShape)
             .size(100.dp), painter = painterResource(id = R.drawable.rrr) , contentDescription = "Image Desc",contentScale = ContentScale.FillBounds)
         Image(modifier = Modifier

@@ -15,6 +15,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import com.mindorks.example.kotlincomposecourse.Image.ImageComp
 import com.mindorks.example.kotlincomposecourse.croping.ImagesViewModel
 import com.mindorks.example.kotlincomposecourse.croping.ViewModelDemo
+import com.mindorks.example.kotlincomposecourse.dialogs.AlertDialogComp
 import com.mindorks.example.kotlincomposecourse.kotlinflows.sharedflow.OneShotOperationUsingSharedFlowComp
 import com.mindorks.example.kotlincomposecourse.kotlinflows.sharedflow.SharedFlowFruitsComposable
 import com.mindorks.example.kotlincomposecourse.kotlinflows.sharedflow.SharedFlowFruitsViewModel
@@ -43,6 +44,7 @@ class MainActivity : ComponentActivity() {
                     //OneShotOperationUsingSharedFlowComp()
                     //SnapshotflowComp()
                     ImageComp()
+                    //AlertDialogComp()
                     //App(viewModel)
                     //TextFieldDemo()
                     //Demo_SwitchComponent()

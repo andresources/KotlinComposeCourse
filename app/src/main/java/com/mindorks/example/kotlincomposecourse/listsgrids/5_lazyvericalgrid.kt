@@ -11,7 +11,10 @@ import androidx.compose.ui.unit.dp
 @Composable
 fun LazyVerticalGridDemo(){
     var listEmp = mutableListOf<Emp>()
-    loadFakeData(listEmp)
+    //loadFakeData(listEmp)
+    repeat(100){
+        listEmp.add(Emp("Name: $it",10000))
+    }
     LazyVerticalGrid(
         //columns = GridCells.Adaptive(minSize = 128.dp)
         columns = GridCells.Fixed(2)

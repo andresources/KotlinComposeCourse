@@ -13,7 +13,10 @@ import androidx.compose.ui.unit.dp
 @Composable
 fun LazyHorizontalGridDemo(){
     var listEmp = mutableListOf<Emp>()
-    loadFakeData(listEmp)
+    //loadFakeData(listEmp)
+    repeat(100){
+        listEmp.add(Emp("Name: $it",10000))
+    }
     LazyHorizontalGrid(
         contentPadding = PaddingValues(all = 10.dp),
         verticalArrangement = Arrangement.spacedBy(25.dp),
