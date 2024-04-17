@@ -5,17 +5,30 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.viewModels
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.wrapContentSize
+import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material3.Card
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.dp
+import androidx.compose.ui.window.Dialog
+import com.example.example1.BackbuttonHandler
 import com.mindorks.example.kotlincomposecourse.Image.ImageComp
+import com.mindorks.example.kotlincomposecourse.checkboxdemo.CheckBoxDemo
 import com.mindorks.example.kotlincomposecourse.croping.ImagesViewModel
 import com.mindorks.example.kotlincomposecourse.croping.ViewModelDemo
 import com.mindorks.example.kotlincomposecourse.dialogs.AlertDialogComp
+import com.mindorks.example.kotlincomposecourse.dialogs.MyDialogComp
 import com.mindorks.example.kotlincomposecourse.kotlinflows.sharedflow.OneShotOperationUsingSharedFlowComp
 import com.mindorks.example.kotlincomposecourse.kotlinflows.sharedflow.SharedFlowFruitsComposable
 import com.mindorks.example.kotlincomposecourse.kotlinflows.sharedflow.SharedFlowFruitsViewModel
@@ -23,6 +36,7 @@ import com.mindorks.example.kotlincomposecourse.kotlinflows.snapshotflow.Snapsho
 import com.mindorks.example.kotlincomposecourse.kotlinflows.stateflow.OneShotOperationUsingStateFlowComp
 import com.mindorks.example.kotlincomposecourse.kotlinflows.stateflow.StateFlowFruitsComposables
 import com.mindorks.example.kotlincomposecourse.kotlinflows.stateflow.StateFlowFruitsViewModel
+import com.mindorks.example.kotlincomposecourse.shapes.ShapesComposable
 import com.mindorks.example.kotlincomposecourse.ui.theme.KotlinComposeCourseTheme
 
 class MainActivity : ComponentActivity() {
@@ -43,8 +57,12 @@ class MainActivity : ComponentActivity() {
                     //OneShotOperationUsingStateFlowComp()
                     //OneShotOperationUsingSharedFlowComp()
                     //SnapshotflowComp()
-                    ImageComp()
+                    //ImageComp()
                     //AlertDialogComp()
+                    //MyDialogComp()
+                    //ShapesComposable()
+                    BackbuttonHandler()
+
                     //App(viewModel)
                     //TextFieldDemo()
                     //Demo_SwitchComponent()

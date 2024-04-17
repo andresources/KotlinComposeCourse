@@ -34,13 +34,15 @@ fun CheckBoxDemo() {
 
 @Composable
 fun SimpleCheckBox() {
-    val checked = remember { mutableStateOf(false) }
+    val chk = remember { mutableStateOf(false) } //state
     Column {
         Checkbox(
-            checked = checked.value,
-            onCheckedChange = { isChecked -> checked.value = isChecked }
+            checked = chk.value,
+            onCheckedChange = {
+                chk.value = it
+            }
         )
-        Text("Checkbox is ${if (checked.value) "checked" else "unchecked"}")
+        Text("Checkbox is ${if (chk.value) "checked" else "unchecked"}")
     }
 }
 
@@ -78,7 +80,6 @@ fun CheckboxWithLabelExample() {
             onCheckedChange = { isChecked -> checked.value = isChecked }
         )
         Spacer(modifier = Modifier.width(0.dp))
-        Text(
-            text ="Label for checkbox")
+        Text(text ="Cricket")
     }
 }
