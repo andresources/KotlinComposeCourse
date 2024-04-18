@@ -23,6 +23,8 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.Dialog
 import com.example.example1.BackbuttonHandler
+import com.example.example1.dropdown.listsgrids.LazyHorizontalGridDemo
+import com.example.example1.dropdown.listsgrids.LazyVerticalGridDemo
 import com.mindorks.example.kotlincomposecourse.Image.ImageComp
 import com.mindorks.example.kotlincomposecourse.checkboxdemo.CheckBoxDemo
 import com.mindorks.example.kotlincomposecourse.croping.ImagesViewModel
@@ -36,7 +38,9 @@ import com.mindorks.example.kotlincomposecourse.kotlinflows.snapshotflow.Snapsho
 import com.mindorks.example.kotlincomposecourse.kotlinflows.stateflow.OneShotOperationUsingStateFlowComp
 import com.mindorks.example.kotlincomposecourse.kotlinflows.stateflow.StateFlowFruitsComposables
 import com.mindorks.example.kotlincomposecourse.kotlinflows.stateflow.StateFlowFruitsViewModel
+import com.mindorks.example.kotlincomposecourse.reusablebutton.ReusableComposable
 import com.mindorks.example.kotlincomposecourse.shapes.ShapesComposable
+import com.mindorks.example.kotlincomposecourse.showhide.ShowHideComposable
 import com.mindorks.example.kotlincomposecourse.ui.theme.KotlinComposeCourseTheme
 
 class MainActivity : ComponentActivity() {
@@ -61,7 +65,11 @@ class MainActivity : ComponentActivity() {
                     //AlertDialogComp()
                     //MyDialogComp()
                     //ShapesComposable()
-                    BackbuttonHandler()
+                   // LazyVerticalGridDemo()
+                    //LazyHorizontalGridDemo()
+                    //ReusableComposable()
+                    ShowHideComposable()
+                    //BackbuttonHandler()
 
                     //App(viewModel)
                     //TextFieldDemo()

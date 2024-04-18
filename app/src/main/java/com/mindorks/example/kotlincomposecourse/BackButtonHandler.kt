@@ -14,6 +14,9 @@ fun BackbuttonHandler() {
     var backPressCount by remember { mutableStateOf(0) } //
     Column{
         Text(text = "Clicked : $backPressCount")
+        if(backPressCount==2){
+            //Your logic
+        }
     }
 
     BackHandler{
