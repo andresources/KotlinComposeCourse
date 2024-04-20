@@ -21,12 +21,19 @@ import com.mindorks.example.kotlincomposecourse.kotlinflows.sharedflow.SharedFlo
 import com.mindorks.example.kotlincomposecourse.kotlinflows.stateflow.StateFlowFruitsViewModel
 import com.mindorks.example.kotlincomposecourse.animations.ShowHideComposable
 import com.mindorks.example.kotlincomposecourse.animations.ValueBasedAnimDemo
+import com.mindorks.example.kotlincomposecourse.gradients.GradientsDemo
+import com.mindorks.example.kotlincomposecourse.mvvm.ex1.CreditCardScreen
+import com.mindorks.example.kotlincomposecourse.mvvm.ex1.viewmodel.CreditCardViewModel
+import com.mindorks.example.kotlincomposecourse.mvvm.ex2.PostListComposable
+import com.mindorks.example.kotlincomposecourse.mvvm.ex2.PostViewModel
 import com.mindorks.example.kotlincomposecourse.ui.theme.KotlinComposeCourseTheme
 
 class MainActivity : ComponentActivity() {
     val viewModel: ImagesViewModel by viewModels()
     val fruitsViewModel: StateFlowFruitsViewModel by viewModels()
     val fruitViewModel: SharedFlowFruitsViewModel by viewModels()
+    private val creditCardViewModel: CreditCardViewModel by viewModels()
+    private val postViewModel: PostViewModel by viewModels()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
@@ -39,7 +46,10 @@ class MainActivity : ComponentActivity() {
                     //AnimatedVisibilityDemo()
                     //AnimatedContentDemo()
                     //AnimatedContentSizeDemo()
-                    ValueBasedAnimDemo()
+                    //ValueBasedAnimDemo()
+                    //GradientsDemo()
+                    //CreditCardScreen(creditCardViewModel)
+                    PostListComposable(postViewModel)
                     //StateFlowFruitsComposables(fruitsViewModel)
                     //SharedFlowFruitsComposable(fruitViewModel)
                     //OneShotOperationUsingStateFlowComp()
