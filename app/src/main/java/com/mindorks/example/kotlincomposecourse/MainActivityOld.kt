@@ -12,6 +12,8 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.hilt.navigation.compose.hiltViewModel
+import com.example.example1.launched_effect.CoroutineScopeDemo
 import com.mindorks.example.kotlincomposecourse.animations.AnimatedContentDemo
 import com.mindorks.example.kotlincomposecourse.animations.AnimatedContentSizeDemo
 import com.mindorks.example.kotlincomposecourse.animations.AnimatedVisibilityDemo
@@ -21,11 +23,17 @@ import com.mindorks.example.kotlincomposecourse.kotlinflows.sharedflow.SharedFlo
 import com.mindorks.example.kotlincomposecourse.kotlinflows.stateflow.StateFlowFruitsViewModel
 import com.mindorks.example.kotlincomposecourse.animations.ShowHideComposable
 import com.mindorks.example.kotlincomposecourse.animations.ValueBasedAnimDemo
+import com.mindorks.example.kotlincomposecourse.dialogs.MyDialogComp
+import com.mindorks.example.kotlincomposecourse.dialogs.ShowHideTextDemo
 import com.mindorks.example.kotlincomposecourse.gradients.GradientsDemo
+import com.mindorks.example.kotlincomposecourse.launched_effect.LaunchedEffectOneTime
 import com.mindorks.example.kotlincomposecourse.mvvm.ex1.CreditCardScreen
 import com.mindorks.example.kotlincomposecourse.mvvm.ex1.viewmodel.CreditCardViewModel
 import com.mindorks.example.kotlincomposecourse.mvvm.ex2.PostListComposable
 import com.mindorks.example.kotlincomposecourse.mvvm.ex2.PostViewModel
+import com.mindorks.example.kotlincomposecourse.mvvm.ex3.Ex3PostListComposable
+import com.mindorks.example.kotlincomposecourse.mvvm.ex3.GenericPostsViewModel
+import com.mindorks.example.kotlincomposecourse.reusablebutton.DemoComposable
 import com.mindorks.example.kotlincomposecourse.ui.theme.KotlinComposeCourseTheme
 
 class MainActivity : ComponentActivity() {
@@ -34,6 +42,8 @@ class MainActivity : ComponentActivity() {
     val fruitViewModel: SharedFlowFruitsViewModel by viewModels()
     private val creditCardViewModel: CreditCardViewModel by viewModels()
     private val postViewModel: PostViewModel by viewModels()
+    //private val genericPostsViewModel: GenericPostsViewModel by viewModels()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
@@ -49,7 +59,14 @@ class MainActivity : ComponentActivity() {
                     //ValueBasedAnimDemo()
                     //GradientsDemo()
                     //CreditCardScreen(creditCardViewModel)
-                    PostListComposable(postViewModel)
+                    //PostListComposable(postViewModel)
+                    /*val genericPostsViewModel = hiltViewModel<GenericPostsViewModel>()
+                    Ex3PostListComposable(genericPostsViewModel)*/
+                    //DemoComposable()
+                    //ShowHideTextDemo()
+                    //CoroutineScopeDemo()
+                    LaunchedEffectOneTime()
+                    //MyDialogComp()
                     //StateFlowFruitsComposables(fruitsViewModel)
                     //SharedFlowFruitsComposable(fruitViewModel)
                     //OneShotOperationUsingStateFlowComp()

@@ -12,6 +12,7 @@ import androidx.compose.material3.ExposedDropdownMenuDefaults
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextField
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
@@ -34,12 +35,8 @@ fun CoroutineScopeDemo() {
     val coroutineScope = rememberCoroutineScope()
 // Launch a coroutine within the remembered coroutine scope
     coroutineScope.launch {
-        while (true) {
-            delay(1000) // Delay for 1 second
-            text = "Hello, Jetpack Compose!"
-            delay(1000) // Delay for 1 second
+            delay(2000)
             text = "Hello, World!"
-        }
     }
     Text(
         text = text,
