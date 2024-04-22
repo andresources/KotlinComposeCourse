@@ -13,6 +13,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.hilt.navigation.compose.hiltViewModel
+import com.example.example1.dropdown.listsgrids.LazyColumnList
 import com.example.example1.launched_effect.CoroutineScopeDemo
 import com.mindorks.example.kotlincomposecourse.animations.AnimatedContentDemo
 import com.mindorks.example.kotlincomposecourse.animations.AnimatedContentSizeDemo
@@ -34,6 +35,7 @@ import com.mindorks.example.kotlincomposecourse.mvvm.ex2.PostViewModel
 import com.mindorks.example.kotlincomposecourse.mvvm.ex3.Ex3PostListComposable
 import com.mindorks.example.kotlincomposecourse.mvvm.ex3.GenericPostsViewModel
 import com.mindorks.example.kotlincomposecourse.reusablebutton.DemoComposable
+import com.mindorks.example.kotlincomposecourse.testing.viewmodel.TestingComposable
 import com.mindorks.example.kotlincomposecourse.ui.theme.KotlinComposeCourseTheme
 
 class MainActivity : ComponentActivity() {
@@ -65,7 +67,10 @@ class MainActivity : ComponentActivity() {
                     //DemoComposable()
                     //ShowHideTextDemo()
                     //CoroutineScopeDemo()
-                    LaunchedEffectOneTime()
+                    //LaunchedEffectOneTime()
+                    //TestingComposable()
+                    //CreditCardScreen()
+                    LazyColumnList()
                     //MyDialogComp()
                     //StateFlowFruitsComposables(fruitsViewModel)
                     //SharedFlowFruitsComposable(fruitViewModel)

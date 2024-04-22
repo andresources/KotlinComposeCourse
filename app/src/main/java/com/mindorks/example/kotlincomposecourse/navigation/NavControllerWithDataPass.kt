@@ -32,7 +32,6 @@ fun NavControllerDemoWithData() {
         composable("screen1") {
 
             Screen1Comp{
-
                 navController.navigate("screen2/$it")
             }
         }

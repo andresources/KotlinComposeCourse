@@ -29,7 +29,7 @@ import androidx.compose.ui.unit.dp
 data class Emp(val ename: String,val esal: Int)
 
 fun loadFakeData( listEmp: MutableList<Emp>){
-    repeat(100){
+    repeat(10){
         listEmp.add(Emp("Name: $it",10000))
     }
 }
@@ -42,9 +42,9 @@ fun EmpCard(e: Emp){
 
     ) {
         Column(modifier = Modifier.clickable {
-            Toast.makeText(context,"Name : ${e.ename}",Toast.LENGTH_SHORT).show()
+            Toast.makeText(context,"Clicked:${e.ename}",Toast.LENGTH_SHORT).show()
         }) {
-            Text(modifier = Modifier.padding(8.dp), text = "Name : ${e.ename}")
+            Text(modifier = Modifier.padding(8.dp), text = "${e.ename}")
             Text(modifier = Modifier.padding(8.dp), text = "Salary : ${e.esal}")
         }
     }

@@ -14,9 +14,9 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.wear.compose.material.Button
 import androidx.wear.compose.material.Text
 import com.mindorks.example.kotlincomposecourse.mvvm.ex1.viewmodel.CreditCardViewModel
-
+import androidx.lifecycle.viewmodel.compose.viewModel
 @Composable
-fun CreditCardScreen(viewModel: CreditCardViewModel){
+fun CreditCardScreen(viewModel: CreditCardViewModel = viewModel()){
     val creditCard by viewModel.creditCards.observeAsState()
     var context = LocalContext.current
     Column {
@@ -24,6 +24,7 @@ fun CreditCardScreen(viewModel: CreditCardViewModel){
             // Show loading indicator or placeholder
             Text(text = "Loading...", color = Color.Blue)
         } else {
+            Text(text = "success", color = Color.Blue)
             LazyColumn {
                 item {
                     Text(text = creditCard?.credit_card_number.toString(), color = Color.Blue)
