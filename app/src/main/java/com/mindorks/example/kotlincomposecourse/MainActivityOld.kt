@@ -35,6 +35,7 @@ import com.mindorks.example.kotlincomposecourse.mvvm.ex2.PostViewModel
 import com.mindorks.example.kotlincomposecourse.mvvm.ex3.Ex3PostListComposable
 import com.mindorks.example.kotlincomposecourse.mvvm.ex3.GenericPostsViewModel
 import com.mindorks.example.kotlincomposecourse.reusablebutton.DemoComposable
+import com.mindorks.example.kotlincomposecourse.snackbarhost.SnackBarHostComposable
 import com.mindorks.example.kotlincomposecourse.testing.viewmodel.TestingComposable
 import com.mindorks.example.kotlincomposecourse.ui.theme.KotlinComposeCourseTheme
 
@@ -70,7 +71,8 @@ class MainActivity : ComponentActivity() {
                     //LaunchedEffectOneTime()
                     //TestingComposable()
                     //CreditCardScreen()
-                    LazyColumnList()
+                    //LazyColumnList()
+                    SnackBarHostComposable()
                     //MyDialogComp()
                     //StateFlowFruitsComposables(fruitsViewModel)
                     //SharedFlowFruitsComposable(fruitViewModel)
