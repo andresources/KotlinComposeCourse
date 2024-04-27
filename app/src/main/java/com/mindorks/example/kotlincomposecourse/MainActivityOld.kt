@@ -8,6 +8,8 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
+import androidx.compose.material3.windowsizeclass.ExperimentalMaterial3WindowSizeClassApi
+import androidx.compose.material3.windowsizeclass.calculateWindowSizeClass
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -34,6 +36,10 @@ import com.mindorks.example.kotlincomposecourse.mvvm.ex2.PostListComposable
 import com.mindorks.example.kotlincomposecourse.mvvm.ex2.PostViewModel
 import com.mindorks.example.kotlincomposecourse.mvvm.ex3.Ex3PostListComposable
 import com.mindorks.example.kotlincomposecourse.mvvm.ex3.GenericPostsViewModel
+import com.mindorks.example.kotlincomposecourse.navigationdrawer.DefaultNavDrawerComposable
+import com.mindorks.example.kotlincomposecourse.navigationdrawer.DrawerAppComponent
+import com.mindorks.example.kotlincomposecourse.responsive.ResponsiveHomeScreen
+import com.mindorks.example.kotlincomposecourse.responsive.ResponsiveViewModel
 import com.mindorks.example.kotlincomposecourse.reusablebutton.DemoComposable
 import com.mindorks.example.kotlincomposecourse.snackbarhost.SnackBarHostComposable
 import com.mindorks.example.kotlincomposecourse.testing.viewmodel.TestingComposable
@@ -45,8 +51,10 @@ class MainActivity : ComponentActivity() {
     val fruitViewModel: SharedFlowFruitsViewModel by viewModels()
     private val creditCardViewModel: CreditCardViewModel by viewModels()
     private val postViewModel: PostViewModel by viewModels()
+    private val reVm: ResponsiveViewModel by viewModels()
     //private val genericPostsViewModel: GenericPostsViewModel by viewModels()
 
+    @OptIn(ExperimentalMaterial3WindowSizeClassApi::class)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
@@ -56,6 +64,9 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
+                    /*val windowSize = calculateWindowSizeClass(this)
+                    ResponsiveHomeScreen(windowSize = windowSize.widthSizeClass,reVm)*/
+                    DefaultNavDrawerComposable()
                     //AnimatedVisibilityDemo()
                     //AnimatedContentDemo()
                     //AnimatedContentSizeDemo()
@@ -72,7 +83,7 @@ class MainActivity : ComponentActivity() {
                     //TestingComposable()
                     //CreditCardScreen()
                     //LazyColumnList()
-                    SnackBarHostComposable()
+                    //SnackBarHostComposable()
                     //MyDialogComp()
                     //StateFlowFruitsComposables(fruitsViewModel)
                     //SharedFlowFruitsComposable(fruitViewModel)
