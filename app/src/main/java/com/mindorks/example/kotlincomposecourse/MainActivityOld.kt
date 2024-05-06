@@ -29,6 +29,11 @@ import com.mindorks.example.kotlincomposecourse.animations.ValueBasedAnimDemo
 import com.mindorks.example.kotlincomposecourse.dialogs.MyDialogComp
 import com.mindorks.example.kotlincomposecourse.dialogs.ShowHideTextDemo
 import com.mindorks.example.kotlincomposecourse.gradients.GradientsDemo
+import com.mindorks.example.kotlincomposecourse.interactors.ButtonInteractor
+import com.mindorks.example.kotlincomposecourse.interactors.ButtonInteractorFlow
+import com.mindorks.example.kotlincomposecourse.interactors.ButtonPressAnimInteractors
+import com.mindorks.example.kotlincomposecourse.interactors.CallingReuseInteractor
+import com.mindorks.example.kotlincomposecourse.interactors.CartButtonInteractor
 import com.mindorks.example.kotlincomposecourse.launched_effect.LaunchedEffectOneTime
 import com.mindorks.example.kotlincomposecourse.mvvm.ex1.CreditCardScreen
 import com.mindorks.example.kotlincomposecourse.mvvm.ex1.viewmodel.CreditCardViewModel
@@ -66,7 +71,14 @@ class MainActivity : ComponentActivity() {
                 ) {
                     /*val windowSize = calculateWindowSizeClass(this)
                     ResponsiveHomeScreen(windowSize = windowSize.widthSizeClass,reVm)*/
-                    DefaultNavDrawerComposable()
+                    //DefaultNavDrawerComposable()
+                    //CreditCardScreen()
+                    //DrawerAppComponent()
+                    //ButtonInteractor()
+                    //ButtonInteractorFlow()
+                    //CartButtonInteractor()
+                    //CallingReuseInteractor()
+                    ButtonPressAnimInteractors()
                     //AnimatedVisibilityDemo()
                     //AnimatedContentDemo()
                     //AnimatedContentSizeDemo()

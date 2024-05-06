@@ -1,5 +1,5 @@
 package com.mindorks.example.kotlincomposecourse.testing
-
+//https://github.com/nameisjayant/Jetpack-Compose-android-Testing/tree/master (Room)
 //https://bitrise.io/blog/post/getting-started-with-testing-jetpack-compose
 //https://developer.android.com/develop/ui/compose/testing?authuser=1
 //https://github.com/SHAMSRIZWAN/MvvmKotlinJetpackCompose/tree/master
@@ -7,7 +7,7 @@ package com.mindorks.example.kotlincomposecourse.testing
 //https://github.com/manishkaushik900/PracticalCompose
 //https://github.com/initishbhatt/Quotes/tree/main
 //https://github.com/talhatek/Holvi/tree/master
-//https://github.com/nameisjayant/Jetpack-Compose-android-Testing/tree/master (Room)
+
 //https://developer.android.com/codelabs/jetpack-compose-testing#5
 //https://medium.com/huawei-developers/how-to-write-unit-tests-for-viewmodel-in-jetpack-compose-eb06cc81042c
 //https://github.com/sadighasanzade/Correct-Sum

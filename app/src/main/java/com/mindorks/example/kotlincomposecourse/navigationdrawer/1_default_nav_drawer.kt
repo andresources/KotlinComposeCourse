@@ -1,5 +1,6 @@
 package com.mindorks.example.kotlincomposecourse.navigationdrawer
 
+import android.annotation.SuppressLint
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.border
@@ -55,6 +56,7 @@ import androidx.compose.ui.unit.dp
 import com.mindorks.example.kotlincomposecourse.R
 import kotlinx.coroutines.launch
 
+@SuppressLint("SuspiciousIndentation")
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun DefaultNavDrawerComposable() {
